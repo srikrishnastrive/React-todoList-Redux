@@ -16,7 +16,7 @@ function App() {
     <>
       <div>
         <AddTodo updateList= {(todo)=> setList([...list,{id:list.length +1,data:todo,finished:todo.finished}])}/>
-        <TodoList list={list}/>
+        <TodoList list={list} updatedList={setList}/>
 
        </div>
     </>

@@ -8,7 +8,7 @@ function AddTodo({updateList}){
             <div>
                 <input type="text" placeholder="add todo data" value={inputValue} 
                 onChange={e => setInputValue(e.target.value)} />
-                <button onClick={()=>updateList(inputValue)}>Add Todo</button>
+                <button onClick={()=>{updateList(inputValue);setInputValue('')}}>Add Todo</button>
             </div>
         </>
     )
