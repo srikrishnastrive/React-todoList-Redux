@@ -16,7 +16,7 @@ function Todo ({todoData,isFinished,changeFinished,onDelete,onEdit}){
                     setEditText(todoData);
                 }
                 else {
-                    onEdit(editText)
+                    onEdit(editText);
                 }
                 setIsEditing(!isEditing);
              
