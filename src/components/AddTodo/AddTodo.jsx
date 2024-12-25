@@ -1,9 +1,10 @@
-import { useContext, useState } from "react"
-import TodoContextDispatch from "../../context/TodoContextDispatch";
+import {  useState } from "react";
 
-function AddTodo({updateList}){
+
+
+
+function AddTodo({addTodo}){
     const [inputValue,setInputValue] = useState('');
-    const {dispatch} = useContext(TodoContextDispatch);
 
     return (
         <>
@@ -12,7 +13,7 @@ function AddTodo({updateList}){
                 onChange={e => setInputValue(e.target.value)} />
                 <button 
                 onClick={()=>{
-                    dispatch({type:'add_todo',payload :{todoText:inputValue}})
+                    addTodo(inputValue);
                     setInputValue('')
 
                 }}>Add Todo</button>
