@@ -1,11 +1,12 @@
-import { act, useReducer, useState } from 'react'
+
 
 import './App.css'
 import TodoList from './components/TodoList/TodoList'
 import AddTodo from './components/AddTodo/AddTodo';
 import { useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { addTodo,deleteTodo,editTodo,todoFinished } from './actions/todoActions';
+
+import todoReducer, { addTodo,deleteTodo,editTodo,todoFinished } from './slice/todoSlice';
 
 
 function App() {
